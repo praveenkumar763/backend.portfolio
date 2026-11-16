@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Praveen Kumar T | Data Analytics & Cloud Fresher</title>
+<meta name="description" content="Portfolio of Praveen Kumar T, an AI & ML engineering graduate building SQL, Power BI and Excel analytics projects, with Google Cloud certifications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f7; --surface:#ffffff; --ink:#14213d; --muted:#55627a; --line:#d5dde9;
+  --accent:#2f5bea; --accent-soft:#e3eaff; --amber:#f2a93b; --teal:#16a085; --code:#0f1b33; --code-ink:#d6e2ff;
+  --head:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --shadow:0 10px 30px rgba(20,33,61,.08);
+}
+:root[data-theme="dark"]{
+  --bg:#0e1626; --surface:#16213a; --ink:#e8eefc; --muted:#9aa8c7; --line:#25324f;
+  --accent:#6f93ff; --accent-soft:#1c2c55; --code:#0a1120; --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);line-height:1.65;transition:background .4s,color .4s;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--head);line-height:1.15;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.5rem);margin-bottom:10px}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:36px}
+section{padding:84px 0}
+#progress{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--accent),var(--amber));z-index:100}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-family:var(--head);font-weight:800;font-size:1.2rem}
+.logo span{color:var(--accent)}
+.links{display:flex;gap:4px;flex-wrap:wrap}
+.links a{padding:8px 12px;border-radius:999px;font-size:.92rem;color:var(--muted);transition:background .25s,color .25s}
+.links a:hover,.links a.on{background:var(--accent-soft);color:var(--accent)}
+#theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.05rem;transition:transform .4s}
+#theme:hover{transform:rotate(25deg)}
+
+/* hero */
+.hero{padding:72px 0 56px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--muted);margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(22,160,133,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 10px rgba(22,160,133,0)}100%{box-shadow:0 0 0 0 rgba(22,160,133,0)}}
+.hero h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;margin-bottom:18px}
+.hero h1 .hl{background:linear-gradient(transparent 62%,var(--amber) 62% 92%,transparent 92%);padding:0 4px}
+.hero p{color:var(--muted);max-width:52ch;font-size:1.08rem;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:600;border:2px solid var(--accent);transition:transform .25s,box-shadow .25s,background .25s,color .25s;cursor:pointer;font-family:var(--body);font-size:1rem}
+.btn.primary{background:var(--accent);color:#fff}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(47,91,234,.28)}
+.btn.ghost:hover{background:var(--accent-soft)}
+
+/* console */
+.console{background:var(--code);color:var(--code-ink);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;font-family:var(--mono);font-size:.84rem;transform:rotate(1.2deg);transition:transform .5s}
+.console:hover{transform:rotate(0)}
+.bar{display:flex;gap:7px;align-items:center;padding:12px 16px;background:rgba(255,255,255,.05)}
+.bar i{width:11px;height:11px;border-radius:50%;background:#ff6b6b}.bar i:nth-child(2){background:#ffc14d}.bar i:nth-child(3){background:#4ddc9a}
+.bar em{margin-left:auto;font-style:normal;opacity:.6;font-size:.76rem}
+.query{padding:18px;min-height:92px;white-space:pre-wrap}
+.kw{color:#8fb0ff}.fn{color:#ffd479}.st{color:#7ee0b4}
+.caret{display:inline-block;width:8px;height:1em;background:var(--amber);vertical-align:-2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.result{padding:0 18px 18px}
+.result table{width:100%;border-collapse:collapse}
+.result th{text-align:left;color:#8a9bc4;font-weight:500;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.result td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.result tr.row{opacity:0;transform:translateX(-14px);transition:opacity .5s,transform .5s}
+.result tr.row.show{opacity:1;transform:none}
+.result .meta{margin-top:10px;font-size:.74rem;opacity:0;transition:opacity .6s;color:#7ee0b4}
+.result .meta.show{opacity:1}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow)}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{display:flex;gap:12px;align-items:flex-start}
+.facts b{display:block;font-family:var(--head)}
+.facts span{color:var(--muted);font-size:.93rem}
+.ico{flex:none;width:38px;height:38px;border-radius:10px;background:var(--accent-soft);display:grid;place-items:center}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.skills h3{font-size:1.15rem;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 13px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:.88rem;font-weight:500;transition:transform .25s,background .25s,color .25s}
+.chip:hover{transform:translateY(-3px) scale(1.04);background:var(--accent);color:#fff}
+.meter{margin-top:16px}
+.meter div{display:flex;justify-content:space-between;font-size:.86rem;color:var(--muted);margin-bottom:6px}
+.track{height:8px;border-radius:8px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--teal));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+
+/* projects */
+.projects{display:grid;gap:24px}
+.proj{display:grid;grid-template-columns:230px 1fr;gap:26px;padding:0;overflow:hidden}
+.peek{background:var(--code);color:var(--code-ink);padding:22px;display:flex;flex-direction:column;justify-content:center;gap:10px;font-family:var(--mono);font-size:.78rem}
+.tbl{border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:7px 10px;transition:transform .35s,border-color .35s}
+.proj:hover .tbl{transform:translateX(6px);border-color:var(--amber)}
+.bars{display:flex;align-items:flex-end;gap:9px;height:110px}
+.bars i{flex:1;border-radius:6px 6px 0 0;background:linear-gradient(var(--amber),#d9822b);height:0;transition:height 1.1s cubic-bezier(.2,.8,.2,1)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kpis div{background:rgba(255,255,255,.08);border-radius:8px;padding:9px;text-align:center}
+.kpis b{display:block;font-size:1.05rem;color:var(--amber);font-family:var(--head)}
+.pbody{padding:26px 26px 26px 0}
+.pbody h3{font-size:1.35rem;margin-bottom:4px}
+.tag{color:var(--accent);font-size:.9rem;font-weight:600;margin-bottom:10px}
+.pbody ul{margin:12px 0 16px 18px;color:var(--muted)}
+.pbody li{margin-bottom:6px}
+.more{max-height:0;overflow:hidden;transition:max-height .6s ease}
+.more p{color:var(--muted);padding-bottom:12px;font-size:.94rem}
+.toggle{background:none;border:none;color:var(--accent);font-weight:600;cursor:pointer;font-family:var(--body);font-size:.95rem;padding:4px 0}
+
+/* timeline */
+.tl{position:relative;padding-left:30px;display:grid;gap:22px}
+.tl::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:3px;background:var(--line);border-radius:3px}
+.tl::after{content:"";position:absolute;left:8px;top:6px;width:3px;height:var(--h,0%);background:var(--accent);border-radius:3px;transition:height 1.6s ease}
+.tl .it{position:relative}
+.tl .it::before{content:"";position:absolute;left:-29px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.it h3{font-size:1.1rem}.it small{color:var(--muted)}
+
+/* certs */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.cert{display:flex;gap:16px;align-items:center;transition:transform .35s,box-shadow .35s}
+.cert:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(47,91,234,.18)}
+.badge{flex:none;width:58px;height:58px;border-radius:16px;background:conic-gradient(#4285f4 0 25%,#34a853 0 50%,#fbbc05 0 75%,#ea4335 0);display:grid;place-items:center}
+.badge span{width:42px;height:42px;border-radius:12px;background:var(--surface);display:grid;place-items:center;font-size:1.3rem}
+.cert h3{font-size:1.02rem}.cert p{color:var(--muted);font-size:.9rem}
+
+/* roadmap */
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.road .card{padding:22px}
+.state{display:inline-block;font-size:.8rem;font-weight:600;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.done{background:#d9f5ec;color:#0c7a60}.now{background:#fff0d1;color:#9a6200}.next{background:var(--accent-soft);color:var(--accent)}
+
+/* contact */
+.contact{text-align:center}
+.contact .card{padding:48px 28px;background:linear-gradient(135deg,var(--accent),#1c3fb5);color:#fff;border:none}
+.contact h2{color:#fff}.contact p{opacity:.9;max-width:50ch;margin:0 auto 26px}
+.contact .btn{border-color:#fff;color:#fff}.contact .btn.primary{background:#fff;color:var(--accent)}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+@media(max-width:860px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}.pbody{padding:0 22px 24px}.peek{min-height:150px}
+  .links{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv,.result tr.row,.result .meta{opacity:1;transform:none}
+  .fill{width:var(--w)!important}.bars i{height:var(--h)!important}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Praveen<span>.</span>dev</a>
+    <div class="links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a>
+      <a href="#education">Education</a><a href="#certs">Certifications</a><a href="#roadmap">Roadmap</a><a href="#contact">Contact</a>
+    </div>
+    <button id="theme" aria-label="Switch between light and dark theme">🌙</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <div class="pill"><span class="dot"></span>Open to entry-level Data and Cloud roles</div>
+      <h1>I turn raw data into <span class="hl">answers</span> people can act on.</h1>
+      <p>Hi, I’m Praveen Kumar T, a 2025 AI & ML engineering graduate from Bengaluru. I’m starting my IT career with SQL, Power BI and Excel analytics projects and two Google Cloud certifications, and I’m ready to learn on the job.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="console" aria-label="Animated SQL query listing Praveen’s skills">
+      <div class="bar"><i></i><i></i><i></i><em>praveen_portfolio.sql</em></div>
+      <div class="query" id="query" aria-live="off"></div>
+      <div class="result">
+        <table>
+          <tr><th>skill</th><th>what I use it for</th></tr>
+          <tr class="row"><td>MySQL</td><td>joins, window functions, views</td></tr>
+          <tr class="row"><td>Power BI</td><td>DAX, KPIs, dashboards</td></tr>
+          <tr class="row"><td>Excel</td><td>Power Query, pivots, XLOOKUP</td></tr>
+          <tr class="row"><td>Python</td><td>Pandas, NumPy</td></tr>
+        </table>
+        <div class="meta" id="meta">4 rows returned. Currently learning more cloud.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about"><div class="wrap">
+  <h2 class="rv">About me</h2>
+  <p class="lead rv">A fresher with a data-first mindset who enjoys finding the story hidden in a spreadsheet or a database table.</p>
+  <div class="about">
+    <div class="card rv">
+      <p style="margin-bottom:14px">I studied Artificial Intelligence and Machine Learning at Vidyavardhaka College of Engineering, Mysore, and finished with a CGPA of 8.06. Along the way I found that I enjoy the practical side of data the most: designing clean database schemas, writing queries that answer real business questions and building dashboards that make numbers easy to read.</p>
+      <p style="margin-bottom:14px">My projects use sample business scenarios such as pizza sales and call center operations. They show how I clean data, model it, track KPIs and present insights clearly. I also hold Google Cloud certifications and I’m growing my cloud skills so I can support teams working with data in the cloud.</p>
+      <p>I learn quickly, ask good questions and like explaining findings in plain language.</p>
+    </div>
+    <div class="card rv">
+      <ul class="facts">
+        <li><div class="ico">📍</div><div><b>Location</b><span>Bengaluru, India</span></div></li>
+        <li><div class="ico">🎓</div><div><b>Education</b><span>B.E. in AI & ML, 2021 – 2025</span></div></li>
+        <li><div class="ico">🎯</div><div><b>Looking for</b><span>Data Analyst or Junior Cloud roles</span></div></li>
+        <li><div class="ico">⚡</div><div><b>Strengths</b><span>Data cleaning, dashboards, SQL, quick learning</span></div></li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2 class="rv">Skills</h2>
+  <p class="lead rv">The tools I’ve used in my projects. The bars show how comfortable I feel with each one today, and I’m still growing in all of them.</p>
+  <div class="skills">
+    <div class="card rv"><h3>📊 Data visualization & BI</h3>
+      <div class="chips"><span class="chip">Power BI Desktop</span><span class="chip">DAX</span><span class="chip">KPIs</span><span class="chip">Dashboards</span><span class="chip">Slicers</span><span class="chip">Cards</span></div>
+      <div class="meter"><div><span>Power BI</span><span>Project-ready</span></div><div class="track"><div class="fill" data-w="72"></div></div></div></div>
+    <div class="card rv"><h3>🗄️ Databases</h3>
+      <div class="chips"><span class="chip">MySQL</span><span class="chip">Joins</span><span class="chip">Subqueries</span><span class="chip">Views</span><span class="chip">Stored procedures</span><span class="chip">Normalization</span></div>
+      <div class="meter"><div><span>SQL</span><span>Project-ready</span></div><div class="track"><div class="fill" data-w="75"></div></div></div></div>
+    <div class="card rv"><h3>📑 Excel & data processing</h3>
+      <div class="chips"><span class="chip">Power Query</span><span class="chip">Pivot tables</span><span class="chip">VLOOKUP / XLOOKUP</span><span class="chip">Conditional formatting</span><span class="chip">ETL</span></div>
+      <div class="meter"><div><span>Excel</span><span>Project-ready</span></div><div class="track"><div class="fill" data-w="78"></div></div></div></div>
+    <div class="card rv"><h3>🐍 Programming</h3>
+      <div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span></div>
+      <div class="meter"><div><span>Python for data</span><span>Learning</span></div><div class="track"><div class="fill" data-w="50"></div></div></div></div>
+    <div class="card rv"><h3>🔍 Analytics</h3>
+      <div class="chips"><span class="chip">Data cleaning</span><span class="chip">Data modelling</span><span class="chip">Data visualization</span><span class="chip">Insight analysis</span></div></div>
+    <div class="card rv"><h3>🧰 Tools & AI assistants</h3>
+      <div class="chips"><span class="chip">MySQL Workbench</span><span class="chip">Jupyter Notebook</span><span class="chip">VS Code</span><span class="chip">MS Copilot</span><span class="chip">GitHub Copilot</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2 class="rv">Projects</h2>
+  <p class="lead rv">Three hands-on projects that take data from raw tables to clear decisions.</p>
+  <div class="projects">
+
+    <article class="card proj rv">
+      <div class="peek"><div class="tbl">orders</div><div class="tbl">order_details</div><div class="tbl">pizzas</div><div class="tbl">pizza_types</div></div>
+      <div class="pbody">
+        <h3>Sales Data Analysis (SQL)</h3><div class="tag">MySQL · MySQL Workbench</div>
+        <p style="color:var(--muted)">A relational database for a pizza order management system, queried to understand what sells and when.</p>
+        <ul><li>Designed and implemented the relational database schema.</li><li>Analysed orders, revenue and sales trends with joins, aggregate functions and window functions.</li><li>Surfaced top-selling products and peak sales periods to support business decisions.</li></ul>
+        <div class="more"><p><b>What I practised:</b> database design, normalization, writing readable multi-table queries and using window functions for rankings and running totals.</p></div>
+        <button class="toggle" aria-expanded="false">Show more</button>
+        <div class="btns" style="margin-top:8px"><a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_SQL_REPO_NAME" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="card proj rv">
+      <div class="peek"><div class="bars" data-bars="60,85,45,95,70"><i></i><i></i><i></i><i></i><i></i></div><span style="text-align:center;opacity:.7">KPI tracking</span></div>
+      <div class="pbody">
+        <h3>Call Center Performance Dashboard (Power BI)</h3><div class="tag">Power BI Desktop · DAX · Power Query</div>
+        <p style="color:var(--muted)">An interactive dashboard that shows agent performance, call volume and customer satisfaction in one view.</p>
+        <ul><li>Cleaned and modelled raw call data with Power Query.</li><li>Wrote DAX measures to track KPIs and spot trends across operational metrics.</li><li>Added slicers and filters so managers can explore results themselves.</li></ul>
+        <div class="more"><p><b>What I practised:</b> data modelling, DAX measures, interactive visuals and telling a clear story with diagnostic and descriptive insights.</p></div>
+        <button class="toggle" aria-expanded="false">Show more</button>
+        <div class="btns" style="margin-top:8px"><a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_POWERBI_REPO_NAME" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="card proj rv">
+      <div class="peek"><div class="kpis"><div><b data-count="1000" data-plus="1">0</b>call records</div><div><b>Pivot</b>tables</div><div><b>Slicers</b>filters</div><div><b>Segments</b>customers</div></div></div>
+      <div class="pbody">
+        <h3>Call Center Insights Dashboard (Excel)</h3><div class="tag">Microsoft Excel · Pivot Tables · Slicers</div>
+        <p style="color:var(--muted)">An end-to-end Excel dashboard built from more than 1,000 call records.</p>
+        <ul><li>Analysed call volume, call duration, revenue and customer demographics.</li><li>Built pivot tables and dynamic reports to find trends by agent, city and gender.</li><li>Used conditional formatting and customer segmentation for descriptive and diagnostic insights.</li></ul>
+        <div class="more"><p><b>What I practised:</b> data cleaning, aggregation, dashboard layout and presenting numbers so non-technical readers can follow them.</p></div>
+        <button class="toggle" aria-expanded="false">Show more</button>
+        <div class="btns" style="margin-top:8px"><a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_EXCEL_REPO_NAME" target="_blank" rel="noopener">View on GitHub</a></div>
+      </div>
+    </article>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2 class="rv">Education</h2>
+  <p class="lead rv">My academic foundation in AI, machine learning and engineering.</p>
+  <div class="tl rv" id="tl">
+    <div class="it"><h3>Bachelor of Engineering, Artificial Intelligence & Machine Learning</h3><small>Vidyavardhaka College of Engineering, Mysore · 2021 – 2025</small><p style="color:var(--muted)">Graduated with a CGPA of 8.06 and built data-focused projects on top of the coursework.</p></div>
+    <div class="it"><h3>Google Cloud certifications</h3><small>Data Analytics and Associate Cloud Engineer career readiness</small><p style="color:var(--muted)">Added cloud and analytics credentials to prepare for entry-level IT roles.</p></div>
+    <div class="it"><h3>Next: first role in IT</h3><small>Data Analyst or Junior Cloud Engineer</small><p style="color:var(--muted)">Looking for a team where I can apply my skills and keep learning.</p></div>
+  </div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+  <h2 class="rv">Certifications</h2>
+  <p class="lead rv">Credentials from Google Cloud that back up my data and cloud foundations.</p>
+  <div class="certs">
+    <a class="card cert rv" href="YOUR_CERTIFICATE_LINK_1" target="_blank" rel="noopener"><div class="badge"><span>📈</span></div><div><h3>Google Cloud Data Analytics</h3><p>Google Cloud · View credential</p></div></a>
+    <a class="card cert rv" href="YOUR_CERTIFICATE_LINK_2" target="_blank" rel="noopener"><div class="badge"><span>☁️</span></div><div><h3>Career Readiness: Associate Cloud Engineer</h3><p>Google Cloud · View credential</p></div></a>
+  </div>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <h2 class="rv">Learning roadmap</h2>
+  <p class="lead rv">Where I am and where I’m heading as I grow into a working IT professional.</p>
+  <div class="road">
+    <div class="card rv"><span class="state done">Done</span><h3>Analytics foundations</h3><p style="color:var(--muted)">SQL, Power BI and Excel dashboards built end to end.</p></div>
+    <div class="card rv"><span class="state done">Done</span><h3>Google Cloud basics</h3><p style="color:var(--muted)">Data Analytics and Cloud Engineer career readiness certificates.</p></div>
+    <div class="card rv"><span class="state now">In progress</span><h3>Python for data</h3><p style="color:var(--muted)">Practising Pandas and NumPy in Jupyter Notebook.</p></div>
+    <div class="card rv"><span class="state next">Next</span><h3>Hands-on cloud projects</h3><p style="color:var(--muted)">Building and documenting small projects on Google Cloud.</p></div>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="card rv">
+    <h2>Let’s work together</h2>
+    <p>I’m looking for an entry-level role where I can contribute to data and cloud work and keep learning from a good team. Send me a message and I’ll reply quickly.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn primary" href="mailto:praveent9045@gmail.com">Email me</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer>© <span id="yr"></span> Praveen Kumar T · Bengaluru, India · praveent9045@gmail.com</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement, tbtn = document.getElementById('theme');
+  var saved = null; try{ saved = localStorage.getItem('theme'); }catch(e){}
+  var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  function applyTheme(){ root.setAttribute('data-theme', dark ? 'dark' : 'light'); tbtn.textContent = dark ? '☀️' : '🌙'; }
+  applyTheme();
+  tbtn.addEventListener('click', function(){ dark = !dark; applyTheme(); try{ localStorage.setItem('theme', dark ? 'dark':'light'); }catch(e){} });
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* hero: typed SQL query, then result rows */
+  var q = document.getElementById('query'), rows = document.querySelectorAll('.result tr.row'), meta = document.getElementById('meta');
+  var parts = [['SELECT','kw'],[' skill, used_for\n',''],['FROM','kw'],[' praveen_skills\n',''],['WHERE','kw'],[' job_ready = ',''],['TRUE','st'],[';','']];
+  function showRows(){ rows.forEach(function(r,i){ setTimeout(function(){ r.classList.add('show'); }, reduce ? 0 : 350*i); }); setTimeout(function(){ meta.classList.add('show'); }, reduce ? 0 : 350*rows.length + 200); }
+  function paint(html){ q.innerHTML = html + '<span class="caret"></span>'; }
+  if(reduce){ paint(parts.map(function(p){ return p[1] ? '<span class="'+p[1]+'">'+p[0]+'</span>' : p[0]; }).join('')); showRows(); }
+  else {
+    var pi = 0, ci = 0, html = '';
+    (function type(){
+      if(pi >= parts.length){ setTimeout(showRows, 500); return; }
+      var t = parts[pi][0], c = parts[pi][1];
+      ci++;
+      var chunk = t.slice(0, ci).replace(/</g,'&lt;');
+      paint(html + (c ? '<span class="'+c+'">'+chunk+'</span>' : chunk));
+      if(ci >= t.length){ html += c ? '<span class="'+c+'">'+t+'</span>' : t; pi++; ci = 0; }
+      setTimeout(type, 38);
+    })();
+  }
+
+  /* scroll progress + active nav */
+  var bar = document.getElementById('progress'), links = document.querySelectorAll('.links a'), secs = document.querySelectorAll('main section');
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.width = (h > 0 ? scrollY / h * 100 : 0) + '%';
+    var cur = '';
+    secs.forEach(function(s){ if(s.getBoundingClientRect().top < 140) cur = s.id; });
+    links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + cur); });
+  }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* reveal + triggered animations */
+  function counter(el){
+    var end = +el.dataset.count, start = performance.now(), dur = 1400;
+    (function step(now){ var p = Math.min((now - start) / dur, 1); el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString() + (p === 1 && el.dataset.plus ? '+' : ''); if(p < 1) requestAnimationFrame(step); })(start);
+  }
+  function fire(el){
+    el.classList.add('in');
+    el.querySelectorAll('.fill').forEach(function(f){ f.style.setProperty('--w', f.dataset.w + '%'); f.style.width = f.dataset.w + '%'; });
+    el.querySelectorAll('.bars').forEach(function(b){ b.dataset.bars.split(',').forEach(function(v,i){ var bi = b.children[i]; bi.style.setProperty('--h', v + '%'); setTimeout(function(){ bi.style.height = v + '%'; }, reduce ? 0 : 120*i); }); });
+    el.querySelectorAll('[data-count]').forEach(function(c){ reduce ? (c.textContent = '1,000+') : counter(c); });
+    if(el.id === 'tl') el.style.setProperty('--h', '100%');
+  }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ fire(e.target); io.unobserve(e.target); } }); }, {threshold:.18});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* project show more */
+  document.querySelectorAll('.toggle').forEach(function(b){
+    b.addEventListener('click', function(){
+      var more = b.previousElementSibling, open = b.getAttribute('aria-expanded') === 'true';
+      more.style.maxHeight = open ? '0' : more.scrollHeight + 'px';
+      b.setAttribute('aria-expanded', String(!open));
+      b.textContent = open ? 'Show more' : 'Show less';
+    });
+  });
+})();
+</script>
+</body>
+</html>
